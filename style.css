@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.counter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.counter.hide {
+    transform: translate(-50%, -50%) scale(0);
+    animation: hide 0.2s ease-out;
+}
+
+@keyframes hide {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+.final {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+}
+
+.final.show {
+    transform: translate(-50%, -50%) scale(1);
+    animation: show 0.2s ease-in;
+}
+
+@keyframes show {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.nums {
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    height: 55px;
+    font-weight: bold;
+}
+
+.nums span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(120deg);
+    transform-origin: bottom center;
+}
+
+.nums span.in {
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: goin 0.5s ease-in-out;
+}
+
+.nums span.out {
+    animation: goout 0.5s ease-in-out;
+}
+
+@keyframes goin {
+    0% {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes goout {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-120deg);
+    }
+}
+
+.box {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(250, 0, 42, 0.911), rgba(165, 253, 0, 0.699));
+    display: flex;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: black 10px 10px 10px;
+}
+
+button {
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: black 10px 10px 10px;
+}
+
+h4 {
+    position: fixed;
+    right: 1px;
+    bottom: 1px;
+    color: rgb(240, 240, 240);
+    background-color: rgba(0, 0, 0, 0.692);
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: rgb(255, 255, 255);
+}
+
+a:active {
+    text-decoration: none !important;
+    color: rgb(197, 52, 52);
+}
+
+h4:active {
+    text-decoration: none !important;
+}
